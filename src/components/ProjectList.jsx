@@ -1,36 +1,49 @@
-import Card from '@mui/material/Card'
-import CardActions from '@mui/material/CardActions'
-import CardContent from '@mui/material/CardContent'
-import CardMedia from '@mui/material/CardMedia'
-import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
+import { Box, Card, CardContent, CardMedia, Container, Typography } from '@mui/material'
 
-const ProjectCard = () => {
+const ProjectCard = ({ projectData }) => {
+    const { title, description, image } = projectData
+
     return (
-        <Card sx={{ maxWidth: 345 }}>
-            <CardMedia component="img" alt="green iguana" height="140" image="/vite.svg" />
-            <CardContent>
+        <Card sx={{ display: 'flex', marginBottom: 3, cursor: 'pointer' }}>
+            <CardContent onClick={() => console.log('clicked')}>
                 <Typography gutterBottom variant="h5" component="div">
-                    Project
+                    {title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
+                    {description}
                 </Typography>
             </CardContent>
-            <CardActions>
-                <Button size="small">Learn More</Button>
-            </CardActions>
+
+            <CardMedia sx={{ minWidth: 150, width: 150 }} component="img" alt="/vite.svg" image={image} />
         </Card>
     )
 }
 
 const ProjectList = () => {
+    const projectData = {
+        title: 'Vite',
+        description:
+            'A build tool that aims to provide a faster and leaner development experience for modern web projects',
+        image: '/vite.svg',
+    }
+    const projects = [1, 2, 3]
+    const oddProjects = projects.filter((_, index) => index % 2 === 0)
+    const evenProjects = projects.filter((_, index) => index % 2 !== 0)
+
     return (
-        <div>
-            <ProjectCard />
-            <ProjectCard />
-        </div>
+        <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+            <Container sx={{ display: 'flex', flexDirection: 'column' }}>
+                {oddProjects.map((_, index) => (
+                    <ProjectCard key={index} projectData={projectData} />
+                ))}
+            </Container>
+
+            <Container sx={{ display: 'flex', flexDirection: 'column' }}>
+                {evenProjects.map((_, index) => (
+                    <ProjectCard key={index} projectData={projectData} />
+                ))}
+            </Container>
+        </Box>
     )
 }
 
