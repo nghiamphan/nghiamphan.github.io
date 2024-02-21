@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography'
 const ProjectCard = () => {
     return (
         <Card sx={{ maxWidth: 345 }}>
-            <CardMedia component="img" alt="green iguana" height="140" image="/public/vite.svg" />
+            <CardMedia component="img" alt="green iguana" height="140" image="/vite.svg" />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                     Project
