@@ -79,7 +79,7 @@ const ProjectList = () => {
     const evenProjects = projects.filter((_, index) => index % 2 !== 0)
 
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'row', marginTop: 15 }}>
             <Container sx={{ display: 'flex', flexDirection: 'column' }}>
                 {oddProjects.map((data, index) => (
                     <ProjectCard key={index} projectData={data} />
