@@ -1,6 +1,8 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ThemeProvider, createTheme } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import ProjectList from './components/ProjectList'
+import ProjectDetail from './components/ProjectDetail'
 
 const theme = createTheme({
     palette: {
@@ -22,9 +24,14 @@ const useStyles = makeStyles({
 const App = () => {
     useStyles()
     return (
-        <ThemeProvider theme={theme}>
-            <ProjectList />
-        </ThemeProvider>
+        <BrowserRouter>
+            <ThemeProvider theme={theme}>
+                <Routes>
+                    <Route path="/" element={<ProjectList />} />
+                    <Route path="/:id" element={<ProjectDetail />} />
+                </Routes>
+            </ThemeProvider>
+        </BrowserRouter>
     )
 }
 

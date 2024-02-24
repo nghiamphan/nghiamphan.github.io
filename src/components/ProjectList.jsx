@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router'
 import {
     Box,
     Card,
@@ -14,20 +15,31 @@ import LaunchIcon from '@mui/icons-material/Launch'
 import projects from '../db/projects.json'
 
 const ProjectCard = ({ projectData }) => {
-    const { title, description, image, github, github_2, deployment } = projectData
+    const navigate = useNavigate()
+    const { id, title, description, tools, image, github, github_2, deployment } = projectData
 
     return (
-        <Card sx={{ display: 'flex', marginBottom: 3, cursor: 'pointer' }}>
-            <CardContent sx={{ width: '90%' }} onClick={() => console.log('clicked')}>
-                <Typography gutterBottom variant="h5" component="div">
+        <Card
+            sx={{ display: 'flex', marginBottom: 3, cursor: 'pointer' }}
+            onClick={() => navigate(`/${id}`)}
+        >
+            <CardContent sx={{ width: '90%' }}>
+                <Typography gutterBottom variant="h5">
                     {title}
                 </Typography>
                 <Typography
                     variant="body2"
                     color="text.secondary"
-                    title={description}
                     dangerouslySetInnerHTML={{ __html: description.replace(/\n/g, '<br />') }}
                 />
+
+                <Typography
+                    variant="body2"
+                    sx={{ marginTop: 2 }}
+                    color="text.disabled"
+                    dangerouslySetInnerHTML={{ __html: tools.replace(/\n/g, '<br />') }}
+                />
+
                 <CardActions sx={{ marginTop: 1 }}>
                     <Link href={github} target="_blank">
                         <Tooltip title="GitHub">
@@ -62,6 +74,7 @@ const ProjectCard = ({ projectData }) => {
 }
 
 const ProjectList = () => {
+    projects.sort((a, b) => a.priority - b.priority)
     const oddProjects = projects.filter((_, index) => index % 2 === 0)
     const evenProjects = projects.filter((_, index) => index % 2 !== 0)
 

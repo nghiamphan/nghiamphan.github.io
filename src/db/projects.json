@@ -1,46 +1,64 @@
 [
     {
+        "id": 1,
         "title": "Transformer",
-        "description": "Implementation of a transformer to reverse a sequence of numbers.\n Through a relatively simple problem, we examine the transformer architecture, which is the basis for the most advanced models in the field of natural language processing.\n\n Tools: Python, Pytorch, sklearn, optuna.",
+        "description": "Implementation of a transformer to reverse a sequence of numbers.\n Through a relatively simple problem, we examine the transformer architecture, which is the basis for the most advanced models in the field of natural language processing.",
+        "tools": "Python, Pytorch, sklearn, optuna.",
         "image": "images/Vanilla Transformer.png",
         "github": "https://github.com/nghiamphan/transformer",
-        "deployment": ""
+        "deployment": "",
+        "priority": 1
     },
     {
+        "id": 2,
         "title": "Neural Network Binary Classification",
-        "description": "Simple neural network for binary classification from scatch.\n\n Tools: Python, Pytorch, sklearn, pandas, matplotlib, seaborn, streamlit.",
+        "description": "Simple neural network for binary classification from scatch.",
+        "tools": "Python, Pytorch, sklearn, pandas, matplotlib, seaborn, streamlit.",
         "image": "images/Neural Network.png",
         "github": "https://github.com/nghiamphan/neural_network_binary_classification",
-        "deployment": "https://neural-network-binary-classification.streamlit.app/"
+        "deployment": "https://neural-network-binary-classification.streamlit.app/",
+        "priority": 2
     },
     {
+        "id": 3,
         "title": "Movies List",
-        "description": "A web app that displays lists of movies. Allows users to add movies to their favorite list.\n\n Tools: \nFrontend: React, React-Redux, Axios, React-Roouter, Material UI, \nBackend: NodeJS, Express, Postgres, Sequelize, JSON Web Token, Bcrypt, Dotenv.",
+        "description": "A web app that displays lists of movies. Allows users to add movies to their favorite list.",
+        "tools": "Frontend: Javascript, React, React-Redux, Axios, React-Router, Material UI.\nBackend: NodeJS, Express, Postgres, Sequelize, JSON Web Token, Bcrypt, Dotenv.",
         "image": "images/The Criterion Collection Logo.svg",
         "github": "https://github.com/nghiamphan/movie-list-backend",
         "github_2": "https://github.com/nghiamphan/myjournal-official-frontend",
-        "deployment": ""
+        "deployment": "",
+        "priority": 3
     },
     {
+        "id": 4,
         "title": "My Journal",
-        "description": "A CRUD app that allows user to write journal.\n\n Tools: \nFrontend: React, React-Redux, Axios, React-Roouter, React-Hook-Form, \nBackend: NodeJS, Express, MongoDB, Moongoose, JSON Web Token, Bcrypt, Dotenv, Jest, Supertest.",
+        "description": "A CRUD app that allows user to write journal.",
+        "tools": "Frontend: Javascript, React, React-Redux, Axios, React-Router, React-Hook-Form.\nBackend: NodeJS, Express, MongoDB, Moongoose, JSON Web Token, Bcrypt, Dotenv, Jest, Supertest.",
         "image": "images/Journal.jpg",
         "github": "https://github.com/nghiamphan/myjournal-official-backend",
         "github_2": "https://github.com/nghiamphan/myjournal-official-frontend",
-        "deployment": "https://myjournal.fly.dev"
+        "deployment": "https://myjournal.fly.dev",
+        "priority": 4
     },
     {
+        "id": 5,
         "title": "React Native Weather App",
-        "description": "An React Native app with three primary screens, each dedicated to different aspects of weather data display and interaction. Navigation utilizes Stack method. There are options to navigate among the screens on the top bar.\n\n Tools: Javascript, React Native, expo-location, expo-sqlite, react-native-paper.",
+        "description": "An React Native app with three primary screens, each dedicated to different aspects of weather data display and interaction. Navigation utilizes Stack method. There are options to navigate among the screens on the top bar.",
+        "tools": "Javascript, React Native, expo-location, expo-sqlite, react-native-paper.",
         "image": "images/Weather.jpg",
         "github": "https://github.com/nghiamphan/react-native-weather-app",
-        "deployment": ""
+        "deployment": "",
+        "priority": 5
     },
     {
+        "id": 6,
         "title": "Progressive Web App with React and Vite",
-        "description": "A To-do progressive web application implemented with React and vite-plugin-pwa.\n\n Tools: Javascript, React, dexie, vite-plugin-pwa.",
+        "description": "A To-do progressive web application implemented with React and vite-plugin-pwa.",
+        "tools": "Javascript, React, dexie, vite-plugin-pwa.",
         "image": "images/To Do.jpg",
         "github": "https://github.com/nghiamphan/react_vite_pwa",
-        "deployment": "https://to-dos-pwa-react.fly.dev"
+        "deployment": "https://to-dos-pwa-react.fly.dev",
+        "priority": 6
     }
 ]

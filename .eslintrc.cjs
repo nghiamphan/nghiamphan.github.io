@@ -15,7 +15,7 @@ module.exports = {
         'react/prop-types': 'off',
         'react/jsx-no-target-blank': 'off',
         'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-        indent: ['warn', 4],
+        indent: ['warn', 4, { SwitchCase: 1 }],
         'linebreak-style': ['warn', 'unix'],
         quotes: ['warn', 'single'],
         semi: ['warn', 'never'],
