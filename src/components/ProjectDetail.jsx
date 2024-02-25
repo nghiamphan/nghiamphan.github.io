@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router'
 import { Box } from '@mui/material'
 
 import projects from '../db/projects.json'
+import Project1 from './individual-project/Project1'
 import Project2 from './individual-project/Project2'
 import Project4 from './individual-project/Project4'
 import Project5 from './individual-project/Project5'
@@ -27,6 +28,8 @@ const ProjectDetail = () => {
 
 const getComponent = (id, projectData) => {
     switch (id) {
+        case '1':
+            return <Project1 projectData={projectData} />
         case '2':
             return <Project2 projectData={projectData} />
         case '4':
