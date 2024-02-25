@@ -1,41 +1,15 @@
-import { useTheme } from '@emotion/react'
-import { CardMedia, Container, Link, Tooltip, Typography } from '@mui/material'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import LaunchIcon from '@mui/icons-material/Launch'
+import { CardMedia, Container, Typography, useTheme } from '@mui/material'
+import CommonSection from './CommonSection'
 
 const Project4 = ({ projectData }) => {
-    const { title, description, image, github, deployment } = projectData
+    const { image } = projectData
     const theme = useTheme()
 
     return (
         <Container sx={{ color: theme.palette.text.secondary }}>
             <CardMedia sx={{ height: 500 }} component="img" image={image} />
 
-            <Typography sx={{ marginY: 3 }} color="text.primary" variant="h4">
-                {title}
-            </Typography>
-
-            <Typography sx={{ marginBottom: 2 }} variant="body1">
-                {description}
-            </Typography>
-
-            <Typography sx={{ marginBottom: 2 }} variant="body1">
-                GitHub:{'\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 '}
-                <Link href={github} target="_blank">
-                    <Tooltip title="GitHub">
-                        <GitHubIcon sx={{ verticalAlign: 'top' }} />
-                    </Tooltip>
-                </Link>
-            </Typography>
-
-            <Typography sx={{ marginBottom: 2 }} variant="body1">
-                Deployment:{'\u00A0 '}
-                <Link href={deployment} target="_blank">
-                    <Tooltip title="Deployment">
-                        <LaunchIcon sx={{ verticalAlign: 'top' }} />
-                    </Tooltip>
-                </Link>
-            </Typography>
+            <CommonSection projectData={projectData} />
 
             <Typography variant="body1">Front end:</Typography>
             <ul>

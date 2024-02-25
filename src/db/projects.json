@@ -54,7 +54,7 @@
     {
         "id": 6,
         "title": "Progressive Web App with React and Vite",
-        "description": "A To-do progressive web application implemented with React and vite-plugin-pwa.",
+        "description": "A progressive web app using React and vite-plugin-pwa. The app allows user to create, set priority and cross off to-do tasks.",
         "tools": "Javascript, React, dexie, vite-plugin-pwa.",
         "image": "images/To Do.jpg",
         "github": "https://github.com/nghiamphan/react_vite_pwa",
