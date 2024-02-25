@@ -26,7 +26,7 @@ const Project4 = ({ projectData }) => {
                 </ul>
             </Typography>
 
-            <Typography variant="body1" component="div">
+            <Typography sx={{ marginBottom: 30 }} variant="body1" component="div">
                 Back end:
                 <ul>
                     <li>Nodejs/Express: Handle requests to the server.</li>

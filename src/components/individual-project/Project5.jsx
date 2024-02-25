@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { CardMedia, Container, ThemeProvider, Typography, createTheme, useTheme } from '@mui/material'
+import { CardMedia, Container, Link, ThemeProvider, Typography, createTheme, useTheme } from '@mui/material'
 import CommonSection from './CommonSection'
 
 const Project5 = ({ projectData }) => {
@@ -72,8 +72,12 @@ const Project5 = ({ projectData }) => {
 
                 <Typography variant="h5">Data Fetching</Typography>
                 <Typography variant="body1">
-                    Use the Open Meteo API (https://open-meteo.com/) for accessing weather and geocoding
-                    data for both the user's current and searched locations.
+                    Use the{' '}
+                    <Link href="https://open-meteo.com/en/docs/" target="_blank">
+                        Open Meteo API
+                    </Link>{' '}
+                    for accessing weather and geocoding data for both the user's current and searched
+                    locations.
                 </Typography>
 
                 <Typography variant="h5"> Location Services</Typography>
@@ -87,7 +91,9 @@ const Project5 = ({ projectData }) => {
                 </Typography>
 
                 <Typography variant="h5">User Interface</Typography>
-                <Typography variant="body1"> Use React Native Paper.</Typography>
+                <Typography sx={{ marginBottom: 30 }} variant="body1">
+                    Use React Native Paper.
+                </Typography>
             </ThemeProvider>
         </Container>
     )
