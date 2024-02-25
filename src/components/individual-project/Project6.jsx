@@ -1,8 +1,8 @@
-import { CardMedia, Container, Typography, useTheme } from '@mui/material'
+import { CardMedia, Container, useTheme } from '@mui/material'
 import CommonSection from './CommonSection'
 
 const Project6 = ({ projectData }) => {
-    const { image, tools } = projectData
+    const { image } = projectData
     const theme = useTheme()
 
     return (
@@ -14,13 +14,6 @@ const Project6 = ({ projectData }) => {
             />
 
             <CommonSection projectData={projectData} />
-
-            <Typography variant="h6">
-                Tools:{' '}
-                <Typography variant="body1" component="span">
-                    {tools}
-                </Typography>
-            </Typography>
         </Container>
     )
 }
