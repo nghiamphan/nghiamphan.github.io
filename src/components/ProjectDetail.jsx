@@ -5,6 +5,7 @@ import { Box } from '@mui/material'
 import projects from '../db/projects.json'
 import Project1 from './individual-project/Project1'
 import Project2 from './individual-project/Project2'
+import Project3 from './individual-project/Project3'
 import Project4 from './individual-project/Project4'
 import Project5 from './individual-project/Project5'
 import Project6 from './individual-project/Project6'
@@ -32,6 +33,8 @@ const getComponent = (id, projectData) => {
             return <Project1 projectData={projectData} />
         case '2':
             return <Project2 projectData={projectData} />
+        case '3':
+            return <Project3 projectData={projectData} />
         case '4':
             return <Project4 projectData={projectData} />
         case '5':

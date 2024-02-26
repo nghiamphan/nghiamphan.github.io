@@ -21,13 +21,13 @@
     },
     {
         "id": 3,
-        "title": "Movies List",
-        "description": "A web app that displays lists of movies. Allows users to add movies to their favorite list.",
-        "tools": "Frontend: Javascript, React, React-Redux, Axios, React-Router, Material UI.\nBackend: NodeJS, Express, Postgres, Sequelize, JSON Web Token, Bcrypt, Dotenv.",
+        "title": "Movie List",
+        "description": "A web app that displays lists of movies. Allows users to add movies to their watchlist.",
+        "tools": "Frontend: Javascript, React, React-Redux, Axios, React-Router, Material UI.\nBackend: NodeJS, Express, PostgresSQL, Sequelize, JSON Web Token, Bcrypt, Dotenv, GitHub Actions.",
         "image": "images/The Criterion Collection Logo.svg",
-        "github": "https://github.com/nghiamphan/movie-list-backend",
-        "github_2": "https://github.com/nghiamphan/myjournal-official-frontend",
-        "deployment": "",
+        "image_2": "images/Letterboxd Logo.png",
+        "github": "https://github.com/nghiamphan/movie-list",
+        "deployment": "https://movie-list.fly.dev/",
         "priority": 3
     },
     {
