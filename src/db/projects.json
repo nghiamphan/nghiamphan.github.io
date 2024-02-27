@@ -43,7 +43,7 @@
     {
         "id": 5,
         "title": "React Native Weather App",
-        "description": "An React Native app with three primary screens, each dedicated to different aspects of weather data display and interaction. Navigation utilizes Stack method. There are options to navigate among the screens on the top bar.",
+        "description": "An React Native app that offers a dedicated screen for exploring various weather data, with intuitive navigation and easy switching between views using a top bar.",
         "tools": "Javascript, React Native, expo-location, expo-sqlite, react-native-paper.",
         "image": "images/Weather.jpg",
         "github": "https://github.com/nghiamphan/react-native-weather-app",
@@ -53,7 +53,7 @@
     {
         "id": 6,
         "title": "Progressive Web App with React and Vite",
-        "description": "A progressive web app using React and vite-plugin-pwa. The app allows user to create, set priority and cross off to-do tasks.",
+        "description": "A progressive web app that allows user to create, prioritize, and manage tasks even without an internet connection, using React, vite-plugin-pwa, and client-side storage IndexedDB.",
         "tools": "Javascript, React, dexie, vite-plugin-pwa.",
         "image": "images/To Do.jpg",
         "github": "https://github.com/nghiamphan/react_vite_pwa",
