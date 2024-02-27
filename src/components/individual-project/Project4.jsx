@@ -12,33 +12,30 @@ const Project4 = ({ projectData }) => {
             <CommonSection projectData={{ ...projectData, tools: null }} />
 
             <Typography sx={{ marginTop: 8 }} variant="h4">
-                Project Description
+                Technologies
             </Typography>
 
             <Typography sx={{ marginTop: 3 }} variant="body1" component="div">
                 Front end:
                 <ul>
-                    <li>React: Use JSX to write React components.</li>
-                    <li>React-Redux: Manage data from a central “store”.</li>
-                    <li>Axios: Make requests to and receive responses from the server.</li>
-                    <li>React-Router: Manage navigation.</li>
-                    <li>React-Hook-Form: Manage data input and validation for forms.</li>
+                    <li>React: Builds interactive user interfaces.</li>
+                    <li>React-Redux: Manages application state.</li>
+                    <li>Axios: Manage API requests</li>
+                    <li>React-Router: Handles navigation between pages.</li>
+                    <li>React-Hook-Form: Simplifies form handling and validation.</li>
                 </ul>
             </Typography>
 
             <Typography sx={{ marginBottom: 30 }} variant="body1" component="div">
                 Back end:
                 <ul>
-                    <li>Nodejs/Express: Handle requests to the server.</li>
-                    <li>MongoDB: The database is hosted on MongoDB Atlas cloud service.</li>
-                    <li>
-                        Mongoose: Translate between Javascript objects and their representation in
-                        MongoDB,provide schema validation.
-                    </li>
-                    <li>JSON Web Token: Encrypt and decrypt tokens used for token based authentication.</li>
-                    <li>Bcrypt: Generate the password hashes.</li>
-                    <li>Dotenv: Configure environment variables.</li>
-                    <li>Jest/Supertest: For writing backend tests.</li>
+                    <li>Nodejs/Express: Handles server-side logic and API requests</li>
+                    <li>MongoDB Atlas: Cloud-hosted database service.</li>
+                    <li>Mongoose: Simplifies interaction with MongoDB and data validation.</li>
+                    <li>JSON Web Token: Enables secure user authentication.</li>
+                    <li>Bcrypt: Hashes passwords for secure storage.</li>
+                    <li>Dotenv: Manages environment variables.</li>
+                    <li>Jest/Supertest: Enables writing comprehensive backend tests.</li>
                 </ul>
             </Typography>
         </Container>

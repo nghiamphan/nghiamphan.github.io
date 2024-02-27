@@ -33,11 +33,10 @@
     {
         "id": 4,
         "title": "My Journal",
-        "description": "A CRUD app that allows user to write journal.",
+        "description": "Journaling app with CRUD functionality",
         "tools": "Frontend: Javascript, React, React-Redux, Axios, React-Router, React-Hook-Form.\nBackend: NodeJS, Express, MongoDB, Moongoose, JSON Web Token, Bcrypt, Dotenv, Jest, Supertest.",
         "image": "images/Journal.jpg",
-        "github": "https://github.com/nghiamphan/myjournal-official-backend",
-        "github_2": "https://github.com/nghiamphan/myjournal-official-frontend",
+        "github": "https://github.com/nghiamphan/myjournal",
         "deployment": "https://myjournal.fly.dev",
         "priority": 4
     },
