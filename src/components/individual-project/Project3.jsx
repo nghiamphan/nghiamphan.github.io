@@ -32,8 +32,8 @@ const Project3 = ({ projectData }) => {
 
             <ThemeProvider theme={typographyTheme}>
                 <Typography variant="h5">Project Motivation</Typography>
-                <Typography variant="body1">
-                    I usually browse lists of movies such as{' '}
+                <Typography variant="body1" component="div">
+                    I often browse curated movie lists such as{' '}
                     <Link
                         href="https://www.criterion.com/shop/browse/list?sort=spine_number"
                         target="_blank"
@@ -51,57 +51,62 @@ const Project3 = ({ projectData }) => {
                     <Link href="https://www.afi.com/afis-100-years-100-movies/" target="_blank">
                         AFI Top 100 Movies
                     </Link>
-                    . Other than going to each specific website, IMDB and Letterboxd are two popular places
-                    to browse for such movie lists which are created and shared by users. However, all of
-                    these websites have at least one of the following limitations:
+                    . Other than going to each specific website, popular platforms like IMDB and Letterboxd
+                    offer user-created and shared lists. However, they often fall short in the following
+                    aspects:
                     <ul>
                         <li>
-                            The list does not display enough information such as genre, synopsis, director
-                            and actors about each movie so that user can take a quick look without having to
-                            go to each movie's own web page.
+                            Limited information: Movie details like genre, synopsis, director, and actors
+                            are often missing, requiring users to visit individual movie pages.
                         </li>
-                        <li>The list does not have continuous scrolling.</li>
+                        <li>
+                            No continuous scrolling: For extensive lists, navigating through hundreds of
+                            entries can be tedious and require manual pagination.
+                        </li>
                     </ul>
-                    So I created this website to have all the movie lists I care about in one place, and to
-                    have the above limitations addressed.
+                    This project aims to address these limitations while providing a single hub for my
+                    favorite movie lists.
                 </Typography>
 
                 <Typography variant="h5">Features</Typography>
-                <Typography variant="body1">
+                <Typography variant="body1" component="div">
                     <ul>
                         <li>
-                            There are popular movie lists such as The Criterion Collection, TSPDT, AFI Top
-                            100 Movies, and much more.
+                            Diverse movie lists: The platform incorporates popular curated lists like The
+                            Criterion Collection, TSPDT, AFI Top 100 Movies, and much more.
                         </li>
                         <li>
-                            Each movie list displays information such as year, length, genre, production
-                            country, ratings, director, actors and synopsis. The movie data is first fetched
-                            from{' '}
+                            Rich movie information: Within the list, each movie entry provides details like
+                            year, length, genre, production country, ratings, director, actors, and a
+                            synopsis. Data is initially retrieved from the{' '}
                             <Link href="https://www.omdbapi.com/" target="_blank">
                                 OMDB API
                             </Link>{' '}
-                            and then stored in the PostgresSQL database.
+                            and stored in a PostgresSQL database.
                         </li>
                         <li>
-                            For movie lists that have more than 100 movies, the website has continuous
-                            scrolling that fetches 100 movies at a time.
+                            Continuous scrolling: Lists exceeding 100 movies offer continuous scrolling
+                            functionality, fetching additional entries in batches of 100.
                         </li>
-                        <li>There is a search bar to search for movies by title, director, or actor.</li>
                         <li>
-                            User can create their own account. A logged-in user can add a movie to their own
-                            watchlist and watch history.
+                            Search functionality: Users can search for movies by title, director, or actor
+                            through a dedicated search bar.
+                        </li>
+                        <li>
+                            User accounts: Registered users can create personalized watchlists and track
+                            their movie viewing history.
                         </li>
                     </ul>
                 </Typography>
 
                 <Typography variant="h5">Deployment</Typography>
                 <Typography sx={{ marginBottom: 30 }} variant="body1">
-                    The website and Postgres database are hosted on{' '}
+                    The application and its PostgresSQL database are hosted on{' '}
                     <Link href={deployment} target="_blank">
                         Fly.io
                     </Link>
-                    . A GitHub Actions pipeline is set up for CI/CD that autodeploys new changes when the
-                    code is pushed to the GitHub repository.
+                    . A CI/CD pipeline is established using GitHub Actions, automatically deploying code
+                    updates upon commits to the project's GitHub repository.
                 </Typography>
             </ThemeProvider>
         </Container>

@@ -22,7 +22,7 @@
     {
         "id": 3,
         "title": "Movie List",
-        "description": "A web app that displays lists of movies. Allows users to add movies to their watchlist.",
+        "description": "Browse curated movie lists effortlessly! This app aggregates popular movie lists, displays rich details, offers continuous scrolling, and lets user create watchlists.",
         "tools": "Frontend: Javascript, React, React-Redux, Axios, React-Router, Material UI.\nBackend: NodeJS, Express, PostgresSQL, Sequelize, JSON Web Token, Bcrypt, Dotenv, GitHub Actions.",
         "image": "images/The Criterion Collection Logo.svg",
         "image_2": "images/Letterboxd Logo.png",
