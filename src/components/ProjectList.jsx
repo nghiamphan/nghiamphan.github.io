@@ -40,7 +40,7 @@ const ProjectCard = ({ projectData }) => {
                     dangerouslySetInnerHTML={{ __html: tools.replace(/\n/g, '<br />') }}
                 />
 
-                <CardActions sx={{ marginTop: 1 }}>
+                <CardActions sx={{ marginTop: 1 }} onClick={(event) => event.stopPropagation()}>
                     <Link href={github} target="_blank">
                         <Tooltip title="GitHub">
                             <GitHubIcon />
