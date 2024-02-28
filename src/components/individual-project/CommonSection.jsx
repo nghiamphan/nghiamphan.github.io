@@ -16,21 +16,13 @@ const CommonSection = ({ projectData }) => {
 
             <Typography sx={{ marginBottom: 2 }} variant="subtitle1">
                 GitHub:{'\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 '}
-                <Link href={github} target="_blank">
-                    <Tooltip title="GitHub">
-                        <GitHubIcon sx={{ verticalAlign: 'top' }} />
-                    </Tooltip>
-                </Link>
+                <GitHubLink github={github} />
             </Typography>
 
             {deployment && (
                 <Typography sx={{ marginBottom: 2 }} variant="subtitle1">
                     Deployment:{'\u00A0 '}
-                    <Link href={deployment} target="_blank">
-                        <Tooltip title="Deployment">
-                            <LaunchIcon sx={{ verticalAlign: 'top' }} />
-                        </Tooltip>
-                    </Link>
+                    <DeploymentLink deployment={deployment} />
                 </Typography>
             )}
 
@@ -46,5 +38,22 @@ const CommonSection = ({ projectData }) => {
     )
 }
 
+const GitHubLink = ({ github }) => (
+    <Link href={github} target="_blank">
+        <Tooltip title="GitHub">
+            <GitHubIcon sx={{ verticalAlign: 'top' }} />
+        </Tooltip>
+    </Link>
+)
+
+const DeploymentLink = ({ deployment }) => (
+    <Link href={deployment} target="_blank">
+        <Tooltip title="Deployment">
+            <LaunchIcon sx={{ verticalAlign: 'top' }} />
+        </Tooltip>
+    </Link>
+)
+
 export default CommonSection
+export { GitHubLink, DeploymentLink }
 

@@ -1,17 +1,6 @@
 import { useNavigate } from 'react-router'
-import {
-    Box,
-    Card,
-    CardActions,
-    CardContent,
-    CardMedia,
-    Container,
-    Link,
-    Tooltip,
-    Typography,
-} from '@mui/material'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import LaunchIcon from '@mui/icons-material/Launch'
+import { Box, Card, CardActions, CardContent, CardMedia, Container, Typography } from '@mui/material'
+import { DeploymentLink, GitHubLink } from './individual-project/CommonSection'
 import projects from '../db/projects.json'
 
 const SelfIntroduction = () => {
@@ -32,12 +21,7 @@ const SelfIntroduction = () => {
                 (PostgreSQL, MySQL) and non-relational (MongoDB) databases.
             </Typography>
             <Typography sx={{ marginBottom: 5 }} variant="body1">
-                GitHub page:{' '}
-                <Link href="https://github.com/nghiamphan" target="_blank">
-                    <Tooltip title="GitHub">
-                        <GitHubIcon sx={{ verticalAlign: 'top' }} />
-                    </Tooltip>
-                </Link>
+                GitHub page: <GitHubLink github="https://github.com/nghiamphan" />
             </Typography>
         </Box>
     )
@@ -45,7 +29,7 @@ const SelfIntroduction = () => {
 
 const ProjectCard = ({ projectData }) => {
     const navigate = useNavigate()
-    const { id, title, description, tools, image, github, github_2, deployment } = projectData
+    const { id, title, description, tools, image, github, deployment } = projectData
 
     return (
         <Card
@@ -70,25 +54,8 @@ const ProjectCard = ({ projectData }) => {
                 />
 
                 <CardActions sx={{ marginTop: 1 }} onClick={(event) => event.stopPropagation()}>
-                    <Link href={github} target="_blank">
-                        <Tooltip title="GitHub">
-                            <GitHubIcon />
-                        </Tooltip>
-                    </Link>
-                    {github_2 && (
-                        <Link href={github_2} target="_blank">
-                            <Tooltip title="GitHub">
-                                <GitHubIcon />
-                            </Tooltip>
-                        </Link>
-                    )}
-                    {deployment && (
-                        <Link href={deployment} target="_blank">
-                            <Tooltip title="Deployment">
-                                <LaunchIcon />
-                            </Tooltip>
-                        </Link>
-                    )}
+                    <GitHubLink github={github} />
+                    {deployment && <DeploymentLink deployment={deployment} />}
                 </CardActions>
             </CardContent>
 

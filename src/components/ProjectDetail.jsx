@@ -24,7 +24,7 @@ const ProjectDetail = () => {
 
     const component = getComponent(id, projectData)
 
-    return <Box sx={{ marginTop: 15 }}>{component}</Box>
+    return <Box sx={{ marginTop: 10 }}>{component}</Box>
 }
 
 const getComponent = (id, projectData) => {
